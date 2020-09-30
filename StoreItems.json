@@ -2659,12 +2659,6 @@
 		"defname": "AndroidMuff"
 	},
 	{
-		"abr": "m7mechanisedinfantry",
-		"price": 30000,
-		"category": "Animal",
-		"defname": "M7Mech"
-	},
-	{
 		"abr": "m7pod",
 		"price": -10,
 		"category": "Furniture",

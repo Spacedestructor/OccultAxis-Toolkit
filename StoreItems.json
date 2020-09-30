@@ -4237,12 +4237,6 @@
 		"defname": "MeleeWeapon_Spear"
 	},
 	{
-		"abr": "spelopede",
-		"price": 333,
-		"category": "Animal",
-		"defname": "Spelopede"
-	},
-	{
 		"abr": "spiketrap",
 		"price": 169,
 		"category": "Security",

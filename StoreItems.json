@@ -2851,12 +2851,6 @@
 		"defname": "SteelWool"
 	},
 	{
-		"abr": "microscyther",
-		"price": 67,
-		"category": "Animal",
-		"defname": "MicroScyther"
-	},
-	{
 		"abr": "militarygradecratelarge",
 		"price": -10,
 		"category": "Furniture",

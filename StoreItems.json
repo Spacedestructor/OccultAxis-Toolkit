@@ -14,7 +14,7 @@
 	},
 	{
 		"abr": "advandroidassemblykit",
-		"price": 3667,
+		"price": 3500,
 		"category": "Manufactured",
 		"defname": "AndroidT2Kit"
 	},
@@ -260,7 +260,7 @@
 	},
 	{
 		"abr": "androidassemblykit",
-		"price": 3750,
+		"price": 1500,
 		"category": "Items",
 		"defname": "AndroidT1Kit"
 	},

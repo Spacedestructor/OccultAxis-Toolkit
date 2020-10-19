@@ -1520,7 +1520,7 @@
 	},
 	{
 		"abr": "eltexhelmet",
-		"price": 8,
+		"price": 600,
 		"category": "Headgear",
 		"defname": "Apparel_PsyfocusHelmet"
 	},
@@ -1532,13 +1532,13 @@
 	},
 	{
 		"abr": "eltexshirt",
-		"price": 667,
+		"price": 750,
 		"category": "Apparel",
 		"defname": "Apparel_PsyfocusShirt"
 	},
 	{
 		"abr": "eltexskullcap",
-		"price": 833,
+		"price": 400,
 		"category": "Headgear",
 		"defname": "Apparel_EltexSkullcap"
 	},

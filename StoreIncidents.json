@@ -91,16 +91,6 @@
 		"karmatype": "Doom"
 	},
 	{
-		"abr": "eclipse",
-		"price": 450,
-		"karmatype": "Bad"
-	},
-	{
-		"abr": "aurora",
-		"price": 200,
-		"karmatype": "Good"
-	},
-	{
 		"abr": "blight",
 		"price": 3000,
 		"karmatype": "Bad"
@@ -182,7 +172,7 @@
 	},
 	{
 		"abr": "rarethrumbos",
-		"price": 500,
+		"price": 1000,
 		"karmatype": "Good"
 	},
 	{
@@ -232,22 +222,22 @@
 	},
 	{
 		"abr": "dropraid",
-		"price": 4500,
+		"price": 1500,
 		"karmatype": "Bad"
 	},
 	{
 		"abr": "sapperraid",
-		"price": 2500,
+		"price": 1000,
 		"karmatype": "Bad"
 	},
 	{
 		"abr": "siegeraid",
-		"price": 4500,
+		"price": 2000,
 		"karmatype": "Bad"
 	},
 	{
 		"abr": "mechanoidraid",
-		"price": 6000,
+		"price": 2500,
 		"karmatype": "Bad"
 	},
 	{
@@ -277,7 +267,7 @@
 	},
 	{
 		"abr": "reviveanypawn",
-		"price": 6000,
+		"price": 4000,
 		"karmatype": "Good"
 	},
 	{
@@ -287,12 +277,12 @@
 	},
 	{
 		"abr": "trait",
-		"price": 3500,
+		"price": 1000,
 		"karmatype": "Good"
 	},
 	{
 		"abr": "removetrait",
-		"price": 5000,
+		"price": 1000,
 		"karmatype": "Good"
 	},
 	{
@@ -316,5 +306,5 @@
 		"karmatype": "Good"
 	}
 	],
-	"total": 63
+	"total": 61
 }

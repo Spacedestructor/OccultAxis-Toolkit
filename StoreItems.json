@@ -1550,7 +1550,7 @@
 	},
 	{
 		"abr": "eltexvest",
-		"price": 833,
+		"price": 800,
 		"category": "Apparel",
 		"defname": "Apparel_PsyfocusVest"
 	},
@@ -1988,7 +1988,7 @@
 	},
 	{
 		"abr": "healermechserum",
-		"price": 2167,
+		"price": 1500,
 		"category": "Items",
 		"defname": "MechSerumHealer"
 	},
@@ -2659,6 +2659,12 @@
 		"defname": "AndroidMuff"
 	},
 	{
+		"abr": "m7mechanisedinfantry",
+		"price": -10,
+		"category": "Animal",
+		"defname": "M7Mech"
+	},
+	{
 		"abr": "m7pod",
 		"price": -10,
 		"category": "Furniture",
@@ -2762,7 +2768,7 @@
 	},
 	{
 		"abr": "megascarab",
-		"price": 167,
+		"price": -10,
 		"category": "Animal",
 		"defname": "Megascarab"
 	},
@@ -2792,7 +2798,7 @@
 	},
 	{
 		"abr": "megaspider",
-		"price": 833,
+		"price": 2000,
 		"category": "Animal",
 		"defname": "Megaspider"
 	},
@@ -2849,6 +2855,12 @@
 		"price": 8,
 		"category": "Textiles",
 		"defname": "SteelWool"
+	},
+	{
+		"abr": "microscyther",
+		"price": -10,
+		"category": "Animal",
+		"defname": "MicroScyther"
 	},
 	{
 		"abr": "militarygradecratelarge",
@@ -3224,7 +3236,7 @@
 	},
 	{
 		"abr": "personacore",
-		"price": 6667,
+		"price": 6000,
 		"category": "Items",
 		"defname": "AIPersonaCore"
 	},
@@ -3404,13 +3416,13 @@
 	},
 	{
 		"abr": "prestigereconarmor",
-		"price": 5500,
+		"price": 2500,
 		"category": "Armor",
 		"defname": "Apparel_ArmorReconPrestige"
 	},
 	{
 		"abr": "prestigereconhelmet",
-		"price": 3000,
+		"price": 1000,
 		"category": "Headgear",
 		"defname": "Apparel_ArmorHelmetReconPrestige"
 	},
@@ -3752,13 +3764,13 @@
 	},
 	{
 		"abr": "reconarmor",
-		"price": 4500,
+		"price": 1500,
 		"category": "Armor",
 		"defname": "Apparel_ArmorRecon"
 	},
 	{
 		"abr": "reconhelmet",
-		"price": 2000,
+		"price": 850,
 		"category": "Headgear",
 		"defname": "Apparel_ArmorHelmetRecon"
 	},
@@ -4225,6 +4237,12 @@
 		"defname": "MeleeWeapon_Spear"
 	},
 	{
+		"abr": "spelopede",
+		"price": -10,
+		"category": "Animal",
+		"defname": "Spelopede"
+	},
+	{
 		"abr": "spiketrap",
 		"price": 169,
 		"category": "Security",
@@ -4403,6 +4421,36 @@
 		"price": 7,
 		"category": "Textiles",
 		"defname": "Synthread"
+	},
+	{
+		"abr": "t1android",
+		"price": -10,
+		"category": "Animal",
+		"defname": "Android1Tier"
+	},
+	{
+		"abr": "t2android",
+		"price": -10,
+		"category": "Animal",
+		"defname": "Android2Tier"
+	},
+	{
+		"abr": "t3android",
+		"price": -10,
+		"category": "Animal",
+		"defname": "Android3Tier"
+	},
+	{
+		"abr": "t4android",
+		"price": -10,
+		"category": "Animal",
+		"defname": "Android4Tier"
+	},
+	{
+		"abr": "t5android",
+		"price": -10,
+		"category": "Animal",
+		"defname": "Android5Tier"
 	},
 	{
 		"abr": "table(1x2)",

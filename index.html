@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
@@ -15,13 +15,14 @@
         const itemListURL = "https://raw.githubusercontent.com/Spacedestructor/OccultAxis-Toolkit/master/StoreItems.json";
         const eventListURL = "https://raw.githubusercontent.com/Spacedestructor/OccultAxis-Toolkit/master/StoreIncidents.json";
     </script>
-	<link rel="icon" href="https://static-cdn.jtvnw.net/jtv_user_pictures/0b859cb3-1675-459b-9872-c6d72ef33cdb-profile_image-70x70.png">
+    <link rel="icon"
+        href="https://static-cdn.jtvnw.net/jtv_user_pictures/0b859cb3-1675-459b-9872-c6d72ef33cdb-profile_image-70x70.png">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">OccultAxis</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -39,7 +40,8 @@
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">TwitchToolkit</h1>
-                <p>TwitchToolkit is a mod written by Twitch.tv/hodlhodl that integrates storytelling decisions into chat votes, awards viewers coins for watching, and those coins can be spent on items/events in game.</p>
+                <p>TwitchToolkit is a mod written by Twitch.tv/hodlhodl that integrates storytelling decisions into chat
+                    votes, awards viewers coins for watching, and those coins can be spent on items/events in game.</p>
                 <ul class="list-group">
                     <li class="list-group-item">!bal - check balance and karma rate</li>
                     <li class="list-group-item">!buy - Syntax: !buy beer 6 - purchase an item or event</li>
@@ -47,16 +49,36 @@
                     <li class="list-group-item">!purchaselist - gives users a link to the public purchase list</li>
                     <li class="list-group-item">!instructions - gives users info on using the mod</li>
                     <li class="list-group-item">!modinfo - gives users info about the mod</li>
-                    <li class="list-group-item">!modsettings - gives user info on how many coins are being earned and global settings</li>
-                    <li class="list-group-item">!giftcoins - Syntax: !giftcoins @username 100 - give another viewer your coins</li>
-                    <li class="list-group-item">!allcommands - shows all available commands to the user, this does not translate by default so it can be universally recognized.</li>
+                    <li class="list-group-item">!modsettings - gives user info on how many coins are being earned and
+                        global settings</li>
+                    <li class="list-group-item">!giftcoins - Syntax: !giftcoins @username 100 - give another viewer your
+                        coins</li>
+                    <li class="list-group-item">!allcommands - shows all available commands to the user, this does not
+                        translate by default so it can be universally recognized.</li>
                     <li class="list-group-item">!joinqueue - join the viewer name queue</li>
                     <li class="list-group-item">!mypawnstory - view information about your pawns backstory</li>
                     <li class="list-group-item">!mypawnskills - view information about your pawns skills</li>
                     <li class="list-group-item">!levelskill</li>
                     <li class="list-group-item">!installedmods - shows you a list of currently running mods</li>
-                    <li class="list-group-item">!lookup - Usage: !lookup category itemname where "category" can be power, security, animal etc. and "itemname" is the search input for used category</li>
+                    <li class="list-group-item">!lookup - Usage: !lookup category itemname where "category" can be
+                        power, security, animal etc. and "itemname" is the search input for used category</li>
                 </ul>
+                <div>
+                    <form id="Cost-Calculator">
+                        <label for="Coins">Coins/Ammount:</label>
+                        <input type="number" id="Coins" name="Coins" value="0" autocomplete="off" required>
+                        <label for="Item">Cost:</label>
+                        <input type="number" id="Cost" name="Cost" value="0" autocomplete="off" required><br>
+                        <input type="radio" id="Calculate_Ammount" name="Calculate_Options" value="Calculate Amount"
+                            checked>
+                        <label for="Calculate_Ammount">Calculate Ammount</label>
+                        <input type="radio" id="Calculate_Cost" name="Calculate_Options" value="Calculate Cost">
+                        <label for="Calculate_Cost">Calculate Cost</label><br>
+                        <button type="button" onclick="Calculator()">Calculate</button>
+                        <button type="button" onclick="Reset()">Reset</button>
+                    </form>
+                    <div id="Results"></div>
+                </div>
             </div>
         </div>
         <div ng-app='tabs' ng-controller='tabCtrl'>
@@ -66,10 +88,12 @@
                         <div class='tabs'>
                             <form>
                                 <div class="form-group">
-                                    <button class="btn btn-success" ng-class="{'active': (selected == '1')}" ng-click='selected=1'>
+                                    <button class="btn btn-success" ng-class="{'active': (selected == '1')}"
+                                        ng-click='selected=1'>
                                         Items
                                     </button>
-                                    <button class="btn btn-success" ng-class="{'active': (selected == '2')}" ng-click='selected=2'>
+                                    <button class="btn btn-success" ng-class="{'active': (selected == '2')}"
+                                        ng-click='selected=2'>
                                         Events
                                     </button>
                                 </div>
@@ -79,7 +103,8 @@
                                         <input type="number" class="form-control" id="item-price-min" placeholder="0">
                                     </div>
                                     <div class="col-sm-2">
-                                        <input type="number" class="form-control" id="item-price-max" placeholder="100000">
+                                        <input type="number" class="form-control" id="item-price-max"
+                                            placeholder="100000">
                                     </div>
                                 </div>
                             </form>
@@ -93,7 +118,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
                                 </div>
-                                <input type="text" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" class="form-control search" aria-label="Search"
+                                    aria-describedby="inputGroup-sizing-sm">
                             </div>
                             <p>
                                 <button type="button" class="btn btn-primary sort" data-sort="abr">
@@ -122,7 +148,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
                                 </div>
-                                <input type="text" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" class="form-control search" aria-label="Search"
+                                    aria-describedby="inputGroup-sizing-sm">
                             </div>
                             <p>
                                 <button type="button" class="btn btn-primary sort" data-sort="abr">
@@ -166,13 +193,18 @@
                 <a href="#">Back to top</a>
             </p>
             <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-            <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+            <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a
+                    href="../../getting-started/">getting started guide</a>.</p>
         </div>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <style>
         .sort:after {
@@ -187,7 +219,7 @@
             top: -10px;
             right: -5px;
         }
-        
+
         .sort.asc:after {
             width: 0;
             height: 0;
@@ -199,7 +231,7 @@
             top: 4px;
             right: -5px;
         }
-        
+
         .sort.desc:after {
             width: 0;
             height: 0;
@@ -214,14 +246,14 @@
     </style>
     <script type="text/javascript">
         let itemList = null;
-        $.getJSON(itemListURL, function(data) {
+        $.getJSON(itemListURL, function (data) {
             var options = {
                 valueNames: ['abr', 'price', 'category'],
                 item: '<tr><td class="abr" scope="row"></td><td class="price"></td><td class="category"></td></tr>'
             };
 
             var itemData = [];
-            $.each(data.items, function(index, value) {
+            $.each(data.items, function (index, value) {
                 if (value["price"] > 0) {
                     itemData.push(value);
                 }
@@ -231,14 +263,14 @@
         });
 
         let eventList = null;
-        $.getJSON(eventListURL, function(data) {
+        $.getJSON(eventListURL, function (data) {
             var options = {
                 valueNames: ['abr', 'price', 'karmatype'],
                 item: '<tr><td class="abr" scope="row"></td><td class="price"></td><td class="karmatype"></td></tr>'
             };
 
             var eventData = [];
-            $.each(data.incitems, function(index, value) {
+            $.each(data.incitems, function (index, value) {
                 if (value["price"] > 0) {
                     eventData.push(value);
                 }
@@ -247,18 +279,18 @@
             eventList = new List('events', options, eventData);
         });
 
-        $("#item-price-min").keyup(function() {
+        $("#item-price-min").keyup(function () {
             updateItemFilter();
         });
 
-        $("#item-price-max").keyup(function() {
+        $("#item-price-max").keyup(function () {
             updateItemFilter();
         });
 
         function updateItemFilter() {
             var minPrice = $("#item-price-min").val();
             var maxPrice = $("#item-price-max").val();
-            itemList.filter(function(item) {
+            itemList.filter(function (item) {
                 var allow = true;
                 if (minPrice != "" && parseInt(item.values().price) < minPrice) {
                     allow = false;
@@ -268,7 +300,7 @@
                 }
                 return allow;
             });
-	    eventList.filter(function(item) {
+            eventList.filter(function (item) {
                 var allow = true;
                 if (minPrice != "" && parseInt(item.values().price) < minPrice) {
                     allow = false;
@@ -282,10 +314,55 @@
     </script>
     <script type="text/javascript">
         var tabs = angular.module('tabs', [])
-            .controller('tabCtrl', function($scope) {
+            .controller('tabCtrl', function ($scope) {
                 $scope.selected = "1";
             });
     </script>
+    <script>
+        var Counter = 0, Coins = 0, Cost = 0, Current = 0;
+        function Calculator() {
+            Coins = document.getElementById("Coins").value;
+            Cost = document.getElementById("Cost").value;
+            if (Coins == null || Cost == null) {
+                console.log(`Error. Either Coins or Cost resulted in null!`);
+                document.getElementById(`Results`).innerHTML += `Error. Either Coins or Cost resulted in null!<br>`;
+            }
+            if (Coins == 0 && Cost == 0) {
+                console.log(`Why do you bother me wit this?`);
+                document.getElementById(`Results`).innerHTML += `Why do you bother me with this?<br>`;
+            }
+            else {
+                console.log(`Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}`);
+                document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}<br>`;
+                Counter = Number(Counter);
+                Coins = Number(Coins);
+                Cost = Number(Cost);
+                Current = Number(Current)
+                if (document.getElementById(`Calculate_Ammount`).checked) {
+                    while (Coins >= Cost) {
+                        Counter += 1;
+                        Coins -= Cost;
+                        Current = Current + Cost;
+                        console.log(`Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}`);
+                        document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}<br>`;
+                    }
+                }
+                if (document.getElementById(`Calculate_Cost`).checked) {
+                    console.log(`Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}`);
+                    document.getElementById(`Results`).innerHTML += `Ammount: ${Coins} Cost: ${Cost} Total Cost: ${Current}<br>`;
+                    while (Counter < Coins) {
+                        Counter += 1;
+                        Current = Current + Cost;
+                        console.log(`Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}`);
+                        document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}<br>`;
+                    }
+                }
+            }
+        }
+        function Reset() {
+            Counter = 0, Coins = 0, Cost = 0, Current = 0;
+            document.getElementById(`Results`).innerHTML = ``;
+        }
+    </script>
 </body>
-
 </html>

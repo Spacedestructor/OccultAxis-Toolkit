@@ -337,31 +337,32 @@
                 Cost = Number(Cost);
                 Current = Number(Current)
                 if (document.getElementById(`Calculate_Ammount`).checked) {
-                    console.log(`Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}`);
-                    document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}<br>`;
+                    console.log(`Input[Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}]`);
+                    document.getElementById(`Results`).innerHTML += `Input[Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}]<br>`;
                     while (Coins >= Cost) {
                         Counter += 1;
                         Coins -= Cost;
                         Current = Current + Cost;
-                        console.log(`Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}`);
-                        document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}<br>`;
                     }
+                    console.log(`Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}`);
+                    document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Coins left: ${Coins} Total Cost: ${Current}<br>`;
                 }
                 if (document.getElementById(`Calculate_Cost`).checked) {
-                    console.log(`Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}`);
-                    document.getElementById(`Results`).innerHTML += `Ammount: ${Coins} Cost: ${Cost} Total Cost: ${Current}<br>`;
+                    console.log(`Input[Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}]`);
+                    document.getElementById(`Results`).innerHTML += `Input[Ammount: ${Coins} Cost: ${Cost} Total Cost: ${Current}]<br>`;
                     while (Counter < Coins) {
                         Counter += 1;
                         Current = Current + Cost;
-                        console.log(`Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}`);
-                        document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}<br>`;
                     }
+                    console.log(`Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}`);
+                    document.getElementById(`Results`).innerHTML += `Ammount: ${Counter} Cost: ${Cost} Total Cost: ${Current}<br>`;
                 }
             }
         }
         function Reset() {
             Counter = 0, Coins = 0, Cost = 0, Current = 0;
             document.getElementById(`Results`).innerHTML = ``;
+            console.log(`Calculator History reset!`)
         }
     </script>
 </body>

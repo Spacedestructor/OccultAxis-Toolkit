@@ -304,12 +304,7 @@
 		"abr": "randominspire",
 		"price": 450,
 		"karmatype": "Good"
-	},
-	{
-		"abr": "militaryaid",
-		"price": 2500,
-		"karmatype": "Good"
 	}
 	],
-	"total": 62
+	"total": 61
 }

@@ -321,8 +321,8 @@
             });
     </script>
     <script>
-        var Counter = 0, Coins = 0, Cost = 0, Current = 0;
         function Calculator() {
+            var Counter = 0, Coins = 0, Cost = 0, Current = 0;
             Coins = document.getElementById("Coins").value;
             Cost = document.getElementById("Cost").value;
             if (Coins == null || Cost == null) {
@@ -364,7 +364,7 @@
         function Reset() {
             Counter = 0, Coins = 0, Cost = 0, Current = 0;
             document.getElementById(`Results`).innerHTML = ``;
-            console.log(`Calculator History reset!`)
+            console.log(`Calculator History reset!`);
         }
     </script>
 </body>

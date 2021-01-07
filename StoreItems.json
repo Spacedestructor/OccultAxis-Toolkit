@@ -2420,7 +2420,7 @@
 	},
 	{
 		"abr": "kibble",
-		"price": 10,
+		"price": 0,
 		"category": "Foods",
 		"defname": "Kibble"
 	},

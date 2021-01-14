@@ -102,7 +102,7 @@
 	},
 	{
 		"abr": "wandererjoins",
-		"price": 6500,
+		"price": 1500,
 		"karmatype": "Good"
 	},
 	{
@@ -197,7 +197,7 @@
 	},
 	{
 		"abr": "alphabeavers",
-		"price": 3500,
+		"price": 600,
 		"karmatype": "Bad"
 	},
 	{
@@ -232,7 +232,7 @@
 	},
 	{
 		"abr": "siegeraid",
-		"price": 2000,
+		"price": 2500,
 		"karmatype": "Bad"
 	},
 	{

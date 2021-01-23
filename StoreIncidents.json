@@ -266,11 +266,6 @@
 		"karmatype": "Bad"
 	},
 	{
-		"abr": "reviveanypawn",
-		"price": 1500,
-		"karmatype": "Good"
-	},
-	{
 		"abr": "pawn",
 		"price": 1500,
 		"karmatype": "Good"

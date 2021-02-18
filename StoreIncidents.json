@@ -197,7 +197,7 @@
 	},
 	{
 		"abr": "alphabeavers",
-		"price": 600,
+		"price": 2000,
 		"karmatype": "Bad"
 	},
 	{
@@ -267,7 +267,7 @@
 	},
 	{
 		"abr": "pawn",
-		"price": 1500,
+		"price": 2000,
 		"karmatype": "Good"
 	},
 	{
@@ -301,5 +301,5 @@
 		"karmatype": "Good"
 	}
 	],
-	"total": 61
+	"total": 60
 }
